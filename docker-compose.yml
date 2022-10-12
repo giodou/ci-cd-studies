@@ -1,8 +1,9 @@
 version: '3'
 services:
   go:
-    build: .
+    image: golang:1.19
     container_name: go-app
     tty: true
+    working_dir: /usr/src/apps/math
     volumes:
       - .:/usr/src/apps/math
